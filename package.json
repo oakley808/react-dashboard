@@ -66,6 +66,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "blacklist": "^1.1.4",
     "bootstrap": "^3.3.6",
     "classnames": "^2.2.3",
     "csv-es6-data-backend": "git+https://github.com/NuCivic/csv-es6-data-backend.git",
