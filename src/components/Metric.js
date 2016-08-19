@@ -20,6 +20,12 @@ export default class Metric extends BaseComponent {
     let style = {
       background: this.props.background,
     };
+
+    let metric = 'No Data';
+    if (this.state.data) {
+      metric = this.getMetric(this.state.data);
+    };
+    
     style = Object.assign({}, style, this.props.style);
     return (
       <Loader isFeching={this.state.isFeching}>
@@ -29,7 +35,7 @@ export default class Metric extends BaseComponent {
           </div>
           <div className="col-sm-9 col-lg-8">
             <div className="card-metric-number">
-            {this.getMetric(this.getData())}
+            {metric}
             </div>
             <div className="card-metric-caption">
             {this.props.caption}
